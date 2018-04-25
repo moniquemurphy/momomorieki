@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>momomori-eki.net :: {{ artist }} :: {{ song_title }}</title>
+</head>
+<body>
+  <table>
+    <tr>
+    {% for record in lyrics %}
+        <td>{{ record.lyrics_original|safe }}</td>
+        <td>{{ record.lyrics_romaji|safe }}</td>
+        <td>{{ record.lyrics_translated|safe }}</td>
+    {% endfor %}
+    </tr>
+  <table>
+</body>
+</html>
