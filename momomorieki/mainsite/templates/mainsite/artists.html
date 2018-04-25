@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>momomori-eki.net :: artists</title>
+</head>
+<body>
+  {% for artist_name, slug in artists_and_slugs.items %}
+      <li><a href="{% url 'songlist' slug=slug %}">{{ artist_name }}</a></li>
+  {% endfor %}
+
+<a href="{% url 'index' %}">back to home</a>
+</body>
+</html>
