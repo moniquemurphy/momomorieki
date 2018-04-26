@@ -71,14 +71,16 @@ class LyricsView(TemplateView):
         artist_name = self.kwargs['artist_slug'].replace('-', ' ')
         song_title = self.kwargs['song_slug'].replace('-', ' ')
         context['artist'] = artist_name
+        context['artist_slug'] = self.kwargs['artist_slug']
         context['song_title'] = song_title
 
-        lyrics = Song.objects.filter(title_romaji__iexact=song_title)
-
+        try:
+            lyrics = Song.objects.get(title_romaji__iexact=song_title)
+        except Song.DoesNotExist:
         # There are a few songs this trick won't work for. They are special and get their own constants dictionary.
-        if not lyrics:
             lookup_name = SLUG_TO_SONG_TITLE[self.kwargs['song_slug']]
-            lyrics = Song.objects.filter(title_romaji=lookup_name)
+            context['song_title'] = lookup_name
+            lyrics = Song.objects.get(title_romaji=lookup_name)
 
         context['lyrics'] = lyrics
 

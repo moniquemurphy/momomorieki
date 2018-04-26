@@ -1,11 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Yes and Welcome</title>
-</head>
-<body>
+{% extends 'mainsite/base.html' %}
+
+{% block title %}
+  momomori-eki.net :: home
+{% endblock %}
+
+{% block content %}
 <p>hey y'all</p>
 <a href="{% url 'artists' %}">Artists</a>
-</body>
-</html>
+{% endblock %}
