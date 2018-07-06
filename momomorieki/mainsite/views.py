@@ -70,9 +70,17 @@ class LyricsView(TemplateView):
         context = super(LyricsView, self).get_context_data(**kwargs)
         artist_name = self.kwargs['artist_slug'].replace('-', ' ')
         song_title = self.kwargs['song_slug'].replace('-', ' ')
-        context['artist'] = artist_name
-        context['artist_slug'] = self.kwargs['artist_slug']
-        context['song_title'] = song_title
+
+        # Prep the artist name in romaji and the song title for display
+        if self.kwargs['artist_slug'] in SLUG_TO_ARTIST:
+            context['artist'] = SLUG_TO_ARTIST[self.kwargs['artist_slug']]
+        else:
+            context['artist'] = artist_name.title()
+
+        if self.kwargs['song_slug'] in SLUG_TO_SONG_TITLE:
+            context['song_title'] = SLUG_TO_SONG_TITLE[self.kwargs['song_slug']]
+        else:
+            context['song_title'] = song_title.title()
 
         try:
             lyrics = Song.objects.get(title_romaji__iexact=song_title)
@@ -83,6 +91,7 @@ class LyricsView(TemplateView):
             lyrics = Song.objects.get(title_romaji=lookup_name)
 
         context['lyrics'] = lyrics
+        context['artist_slug'] = self.kwargs['artist_slug']
 
         return context
 

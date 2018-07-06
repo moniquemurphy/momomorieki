@@ -1,4 +1,5 @@
 SLUG_TO_ARTIST = {
+    'ai': 'AI',
     'boa': 'BoA',
     'dohzi-t': 'Dohzi-T',
     'gorie-with-jasmine-and-joann': 'Gorie with Jasmine and Joann',
@@ -10,5 +11,6 @@ SLUG_TO_ARTIST = {
 }
 
 SLUG_TO_SONG_TITLE = {
+    'dontleave-me-alone': '(don\'t)Leave Me Alone',
     'kuronekoadult-black-cat': 'Kuroneko~Adult Black Cat~'
 }
