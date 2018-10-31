@@ -4,7 +4,7 @@
 
 {% block content %}
   {% for song, song_slug in songs_and_slugs.items %}
-    <a href="{% url 'lyrics' artist_slug=artist_slug song_slug=song_slug %}">{{ song }}</a>
+    <a href="{% url 'lyrics' artist_slug=artist_slug song_slug=song_slug %}">{{ song }}</a><br>
   {% endfor %}
   <br>
   <a href="{% url 'artists' %}">back to artists</a>

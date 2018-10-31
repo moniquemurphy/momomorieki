@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.views.generic import TemplateView
 from django.utils.text import slugify
+from django.db.models.functions import Lower
 from .models import Artist, Song
 from .helpers import SLUG_TO_ARTIST, SLUG_TO_SONG_TITLE
 
@@ -18,7 +19,7 @@ class ArtistsView(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super(ArtistsView, self).get_context_data(**kwargs)
-        artists = Artist.objects.all().order_by('name_romaji')
+        artists = Artist.objects.all().order_by(Lower('name_romaji'))
 
         artists_and_slugs = {}
 
@@ -45,7 +46,7 @@ class SongListView(TemplateView):
         context['artist_slug'] = self.kwargs['slug']
 
         # Get all the song names for the artist
-        songs = Song.objects.filter(artist__name_romaji__iexact=lookup_name)
+        songs = Song.objects.filter(artist__name_romaji__iexact=lookup_name).order_by(Lower('title_romaji'))
 
         # There are a few artists this trick won't work for. They are special and get their own constants dictionary.
         if not songs:
