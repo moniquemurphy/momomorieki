@@ -6,15 +6,15 @@
   <div class="song_title">{{ song_title }}</div>
   <div class="artist_name">{{ artist }}</div>
   <div class="lyrics_container">
-    <div class="lyrics_column">
+    <div class="japanese_lyrics_column">
         <div class="lyrics_title">{{ lyrics.title_original }}</div>
         {{ lyrics.lyrics_original|safe }}
     </div>
-    <div class="lyrics_column romaji">
+    <div class="romaji_lyrics_column romaji">
         <div class="lyrics_title romaji">{{ lyrics.title_romaji }}</div>
         {{ lyrics.lyrics_romaji|safe }}
     </div>
-    <div class="lyrics_column">
+    <div class="english_lyrics_column">
         <div class="lyrics_title">{{ lyrics.title_translated }}</div>
         {{ lyrics.lyrics_translated|safe }}
     </div>

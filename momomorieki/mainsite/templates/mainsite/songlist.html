@@ -3,9 +3,11 @@
 {% block title %} momomori-eki.net :: {{ artist }} :: songs{% endblock %}
 
 {% block content %}
+    <ul>
   {% for song, song_slug in songs_and_slugs.items %}
-    <a href="{% url 'lyrics' artist_slug=artist_slug song_slug=song_slug %}">{{ song }}</a><br>
+      <li><a href="{% url 'lyrics' artist_slug=artist_slug song_slug=song_slug %}">{{ song }}</a></li>
   {% endfor %}
   <br>
+    </ul>
   <a href="{% url 'artists' %}">back to artists</a>
 {% endblock %}

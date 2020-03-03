@@ -61,7 +61,21 @@
       margin: 0 auto;
     }
 
-    .lyrics_column {
+    .japanese_lyrics_column {
+        min-width: 30%;
+        padding: 0.5em;
+        display: inline-block;
+        margin: 0 auto;
+    }
+
+    .romaji_lyrics_column {
+        min-width: 35%;
+        padding: 0.5em;
+        display: inline-block;
+        margin: 0 auto;
+    }
+
+    .english_lyrics_column {
         min-width: 30%;
         padding: 0.5em;
         display: inline-block;
