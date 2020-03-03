@@ -1,18 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>momomori-eki.net :: {{ artist }} :: {{ song_title }}</title>
-</head>
-<body>
-  <table>
-    <tr>
-    {% for record in lyrics %}
-        <td>{{ record.lyrics_original|safe }}</td>
-        <td>{{ record.lyrics_romaji|safe }}</td>
-        <td>{{ record.lyrics_translated|safe }}</td>
-    {% endfor %}
-    </tr>
-  <table>
-</body>
-</html>
+{% extends 'mainsite/base.html' %}
+
+{% block title %} momomori-eki.net :: {{ artist }} :: {{ song_title }}{% endblock %}
+
+{% block content %}
+  <div class="song_title">{{ song_title }}</div>
+  <div class="artist_name">{{ artist }}</div>
+  <div class="lyrics_container">
+    <div class="japanese_lyrics_column">
+        <div class="lyrics_title">{{ lyrics.title_original }}</div>
+        {{ lyrics.lyrics_original|safe }}
+    </div>
+    <div class="romaji_lyrics_column romaji">
+        <div class="lyrics_title romaji">{{ lyrics.title_romaji }}</div>
+        {{ lyrics.lyrics_romaji|safe }}
+    </div>
+    <div class="english_lyrics_column">
+        <div class="lyrics_title">{{ lyrics.title_translated }}</div>
+        {{ lyrics.lyrics_translated|safe }}
+    </div>
+  </div>
+
+    <a href="{% url 'songlist' slug=artist_slug %}">back to {{ artist }} songs</a>
+
+{% endblock %}

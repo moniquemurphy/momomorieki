@@ -1,4 +1,5 @@
 SLUG_TO_ARTIST = {
+    'ai': 'AI',
     'boa': 'BoA',
     'dohzi-t': 'Dohzi-T',
     'gorie-with-jasmine-and-joann': 'Gorie with Jasmine and Joann',
@@ -6,9 +7,30 @@ SLUG_TO_ARTIST = {
     'nico-touches-the-walls': 'NICO Touches the Walls',
     'satou-chikuzen-kobukuro': 'Satou Chikuzen & Kobukuro',
     'tacky-tsubasa': 'Tacky & Tsubasa',
-    'm-flo': 'm-flo'
+    'm-flo': 'm-flo',
+    'akb48': 'AKB48',
 }
 
 SLUG_TO_SONG_TITLE = {
-    'kuronekoadult-black-cat': 'Kuroneko~Adult Black Cat~'
+    'dontleave-me-alone': '(don\'t)Leave Me Alone',
+    'kuronekoadult-black-cat': 'Kuroneko~Adult Black Cat~',
+    'fake-feat-amuro-namie': 'FAKE (feat. Amuro Namie)',
+    'ai-no-uta-majenta-rein': 'Ai no Uta —MAJENTA REIN—',
+    'asking-why': 'ASKING WHY',
+    'b-wz-you': 'B w/z you',
+    'baby-dont-cry': 'Baby Don\'t Cry',
+    'cant-sleep-cant-eat-im-sick': 'CAN\'T SLEEP CAN\'T EAT I\'M SICK',
+    'can-you-celebrate': 'CAN YOU CELEBRATE?',
+    'close-your-eyes-close-to-you': 'Close your eyes, Close to you',
+    'dont-lie-to-me': 'Don\'t Lie to Me',
+    'dont-wanna-cry': 'Don\'t wanna cry',
+    'dr': 'Dr.',
+    'first-timer-feat-doberman-inc': 'FIRST TIMER feat. DOBERMAN INC',
+    'hide-seek': 'HIDE & SEEK',
+    'put-em-up': 'Put \'Em Up!!',
+    'sit-stay-wait-down': 'Sit! Stay! Wait! Down!',
+    'want-me-want-me': 'WANT ME, WANT ME',
+    'tegami-haikei-juugo-no-kimi-e': 'Tegami ~Haikei Juugo no Kimi e~',
+    'oashisu-feat-diggy-mo-sould-out': 'OASHISU feat. Diggy-MO\' (SOUL\'d OUT)',
+    'lose-your-mind-feat-yutaka-furukawa-from-doping-panda': 'LOSE YOUR MIND feat. Yutaka Furukawa from DOPING PANDA',
 }
