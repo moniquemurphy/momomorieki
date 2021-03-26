@@ -33,4 +33,7 @@ SLUG_TO_SONG_TITLE = {
     'tegami-haikei-juugo-no-kimi-e': 'Tegami ~Haikei Juugo no Kimi e~',
     'oashisu-feat-diggy-mo-sould-out': 'OASHISU feat. Diggy-MO\' (SOUL\'d OUT)',
     'lose-your-mind-feat-yutaka-furukawa-from-doping-panda': 'LOSE YOUR MIND feat. Yutaka Furukawa from DOPING PANDA',
+    'kimi-eforever-friend': 'Kimi e~forever friend',
+    'better-days-feat-katou-miriya-and-tanaka-rouma': 'better days feat. Katou Miriya and Tanaka Rouma',
+    'koi-wa-rizumu-believe-my-way-': 'Koi wa RIZUMU -Believe My Way-',
 }
