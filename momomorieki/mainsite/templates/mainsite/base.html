@@ -3,47 +3,47 @@
 <html>
   <head>
       <title>{% block title %}momomori-eki.net{% endblock %}</title>
-  	<meta name="viewport" content="width=device-width, initial-scale=1">
-  	<meta charset="utf-8">
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-	<link rel="stylesheet" href="{% static 'css/custom.css' %}">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Clicker Script">
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Clicker Script">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
   </head>
   <body>
-	<div class="big-triptych-container header-menu">
-	  <div class="big-triptych-panel">
-	      <div class="little-triptych-panel">
-	        <a href="{% url 'artists' %}">lyrics</a>
-	      </div>
-	      <div class="little-triptych-panel">
-	        manga
-	      </div>
-	      <div class="little-triptych-panel">
-	        art
-	      </div>
-	  </div>
-	  <div class="big-triptych-panel-center">
-	  	<img src="{% static 'img/blossom.png' %}" class="img-responsive">
-	  </div>
-	  <div class="big-triptych-panel">
+    <div class="big-triptych-container header-menu">
+      <div class="big-triptych-panel">
+          <div class="little-triptych-panel">
+            <a href="{% url 'translations' %}"><img src="{% static 'img/translations.png' %}" class="img-responsive header-image"></a>
+          </div>
+          <div class="little-triptych-panel">
+            <img src="{% static 'img/language.png' %}" class="img-responsive header-image">
+          </div>
+          <div class="little-triptych-panel">
+            <img src="{% static 'img/art.png' %}" class="img-responsive header-image">
+          </div>
+      </div>
+      <div class="big-triptych-panel-center">
+          <a href="{% url 'index' %}"><img src="{% static 'img/momomorieki-sign.png' %}" class="img-responsive header-image"></a>
+      </div>
+      <div class="big-triptych-panel">
 
-	      <div class="little-triptych-panel">
-	        blog
-	      </div>
-	      <div class="little-triptych-panel">
-	        links
-	      </div>
-	      <div class="little-triptych-panel">
-	        about
-	      </div>
+          <div class="little-triptych-panel">
+            <img src="{% static 'img/garden.png' %}" class="img-responsive header-image">
+          </div>
+          <div class="little-triptych-panel">
+            <img src="{% static 'img/links.png' %}" class="img-responsive header-image">
+          </div>
+          <div class="little-triptych-panel">
+            <img src="{% static 'img/about.png' %}" class="img-responsive header-image">
+          </div>
 
-	  </div>
-	</div>
+      </div>
+    </div>
 
-	<div class="main-content">
-	  {% block content %}
+    <div class="main-content">
+      {% block content %}
       {% endblock %}
-	</div>
+    </div>
   </body>
 </html>

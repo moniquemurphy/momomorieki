@@ -99,3 +99,9 @@ ENV/
 
 # mypy
 .mypy_cache/
+
+# IDE Files
+*/.DS_Store
+
+# Random stuff
+analyze_new_cluster.sh

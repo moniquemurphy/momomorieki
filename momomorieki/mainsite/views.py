@@ -1,3 +1,4 @@
+from django.core.exceptions import MultipleObjectsReturned
 from django.shortcuts import render
 from django.views.generic import TemplateView
 from django.utils.text import slugify
@@ -5,13 +6,28 @@ from django.db.models.functions import Lower
 from .models import Artist, Song
 from .helpers import SLUG_TO_ARTIST, SLUG_TO_SONG_TITLE
 
-# Create your views here.
 class IndexView(TemplateView):
+
     template_name = 'mainsite/index.html'
 
     def get_context_data(self, **kwargs):
         context = super(IndexView, self).get_context_data(**kwargs)
         return context
+
+class TranslationsView(TemplateView):
+    template_name = 'mainsite/translations.html'
+
+class LanguageView(TemplateView):
+    template_name = 'mainsite/language.html'
+
+class ArtView(TemplateView):
+    template_name = 'mainsite/art.html'
+
+class GardenView(TemplateView):
+    template_name = 'mainsite/garden.html'
+
+class LinksView(TemplateView):
+    template_name = 'mainsite/links.html'
 
 class ArtistsView(TemplateView):
 
@@ -83,13 +99,11 @@ class LyricsView(TemplateView):
         else:
             context['song_title'] = song_title.title()
 
-        try:
-            lyrics = Song.objects.get(title_romaji__iexact=song_title)
-        except Song.DoesNotExist:
-        # There are a few songs this trick won't work for. They are special and get their own constants dictionary.
-            lookup_name = SLUG_TO_SONG_TITLE[self.kwargs['song_slug']]
-            context['song_title'] = lookup_name
-            lyrics = Song.objects.get(title_romaji=lookup_name)
+        print(context['artist'])
+        print(context['song_title'])
+
+        lyrics_query = Song.objects.filter(title_romaji__iexact=context['song_title']).filter(artist__name_romaji__iexact=context['artist'])
+        lyrics = lyrics_query[0]
 
         context['lyrics'] = lyrics
         context['artist_slug'] = self.kwargs['artist_slug']

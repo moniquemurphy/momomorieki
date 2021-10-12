@@ -1,3 +1,7 @@
+body {
+    background-color: #ffd6e4;
+}
+
 .header-menu {
   font-family: 'Clicker Script';
   font-size: 4em;
@@ -12,168 +16,253 @@
     font-style: italic;
 }
 
+.header-image {
+  display: block;
+  margin: 0 auto;
+}
+
+.img-responsive {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 /* Desktop/Laptop Full Resolution */
 @media screen and (min-width: 1500px) {
-    .big-triptych-container {
-      width: 75%;
-      margin: 0 auto;
-      text-align: center;
-      padding-top: 0.5em;
-    }
+  .big-triptych-container {
+    width: 85%;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 0.5em;
+  }
 
-    .big-triptych-panel {
-      width: 33%;
-      height: 100%;
+  .big-triptych-panel {
+    width: 33%;
+    height: 100%;
+    display: inline-block;
+  }
+
+  .big-triptych-panel-center {
+    width: 450px;
+    height: 100%;
+    display: inline-block;
+  }
+
+  .little-triptych-panel {
+    width:30%;
+    height: 100%;
+    margin: auto;
+    display: inline-block;
+    min-height: 1px;
+  }
+
+  .main-content {
+    width: 80%;
+    padding: 2em;
+    margin: 0 auto;
+    background-color: #ffffff;
+  }
+
+  .song_title {
+    text-align: center;
+    font-size: 3em;
+    margin: 0 auto;
+  }
+
+  .artist_name {
+    text-align: center;
+    font-size: 3em;
+    margin: 0 auto;
+  }
+
+  .japanese_lyrics_column {
+      min-width: 30%;
+      padding: 0.5em;
       display: inline-block;
-    }
+      margin: 0 auto;
+  }
 
-    .big-triptych-panel-center {
-      width: 350px;
-      height: 100%;
+  .romaji_lyrics_column {
+      min-width: 35%;
+      padding: 0.5em;
       display: inline-block;
-    }
+      margin: 0 auto;
+  }
 
-    .little-triptych-panel {
-      /* border: 1px solid red; */
-      width:30%;
-      height: 100%;
-      margin: auto;
+  .english_lyrics_column {
+      min-width: 30%;
+      padding: 0.5em;
       display: inline-block;
-      min-height: 1px;
-    }
-
-    .main-content {
-      /* border: 1px solid black; */
-      width: 80%;
-      padding: 2em;
       margin: 0 auto;
-    }
+  }
 
-    .song_title {
+  .lyrics_title {
       text-align: center;
-      font-size: 3em;
+      font-size: 1.5em;
+  }
+
+  .lyrics_container {
+      width: 100%;
+      height: 100%;
+      padding: 0.5em;
+      display: flex;
+  }
+
+  .verse_block {
+      flex: 1;
+      padding-top: 1em;
+      width: 100%;
       margin: 0 auto;
-    }
-
-    .artist_name {
-      text-align: center;
-      font-size: 3em;
-      margin: 0 auto;
-    }
-
-    .japanese_lyrics_column {
-        min-width: 30%;
-        padding: 0.5em;
-        display: inline-block;
-        margin: 0 auto;
-    }
-
-    .romaji_lyrics_column {
-        min-width: 35%;
-        padding: 0.5em;
-        display: inline-block;
-        margin: 0 auto;
-    }
-
-    .english_lyrics_column {
-        min-width: 30%;
-        padding: 0.5em;
-        display: inline-block;
-        margin: 0 auto;
-    }
-
-    .lyrics_title {
-        text-align: center;
-        font-size: 1.5em;
-    }
-
-    .lyrics_container {
-        width: 100%;
-        height: 100%;
-        padding: 0.5em;
-        display: flex;
-    }
-
-    .verse_block {
-        flex: 1;
-        padding-top: 1em;
-        width: 100%;
-        margin: 0 auto;
-    }
+  }
 }
 
 /* Tablet/Medium Resolution */
-@media screen and (min-width: 780px) and (max-width: 1500px) {
- .big-triptych-container {
-      width: 75%;
-      margin: 0 auto;
-      text-align: center;
-      padding-top: 0.5em;
-    }
+@media screen and (min-width: 780px) and (max-width: 2000px) {
+  .big-triptych-container {
+    width: 85%;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 0.5em;
+  }
 
-    .big-triptych-panel {
+  .big-triptych-panel {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+  }
+
+  .big-triptych-panel-center {
+    width: 450px;
+    height: 100%;
+    display: inline-block;
+  }
+
+  .little-triptych-panel {
+    width: 30%;
+    height: 100%;
+    margin: auto;
+    display: inline-block;
+    min-height: 1px;
+  }
+
+  .main-content {
+    width: 80%;
+    padding: 2em;
+    margin: 0 auto;
+    background-color: #ffffff;
+  }
+
+  .song_title {
+    text-align: center;
+    font-size: 3em;
+    margin: 0 auto;
+  }
+
+  .artist_name {
+    text-align: center;
+    font-size: 3em;
+    margin: 0 auto;
+  }
+
+  .lyrics_column {
+      flex: 1;
+      width: 30%;
+      padding: 0.5em;
+      display: inline-block;
+      margin: 0 auto;
+  }
+
+  .lyrics_title {
+      text-align: center;
+      font-size: 1.5em;
+  }
+
+  .lyrics_container {
       width: 100%;
       height: 100%;
-      display: inline-block;
-    }
+      padding: 0.5em;
+      display: flex;
+  }
 
-    .big-triptych-panel-center {
-      width: 350px;
-      height: 100%;
-      display: inline-block;
-    }
-
-    .little-triptych-panel {
-      /* border: 1px solid red; */
-      width: 30%;
-      height: 100%;
-      margin: auto;
-      display: inline-block;
-      min-height: 1px;
-    }
-
-    .main-content {
-      /* border: 1px solid black; */
-      width: 80%;
-      padding: 2em;
+  .verse_block {
+      padding-top: 1em;
+      width: 100%;
       margin: 0 auto;
-    }
+  }
+}
 
-    .song_title {
+/* Phone/Small Resolution */
+@media screen and (max-width: 779px) {
+  .big-triptych-container {
+    width: 85%;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 0.5em;
+  }
+
+  .big-triptych-panel {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    text-align: center;
+  }
+
+  .big-triptych-panel-center {
+    width: 320px;
+    height: 100%;
+    display: inline-block;
+  }
+
+  .little-triptych-panel {
+    width: 30%;
+    height: 100%;
+    margin: auto;
+    display: inline-block;
+    min-height: 1px;
+  }
+
+  .main-content {
+    width: 80%;
+    padding: 0.5em;
+    margin: 0 auto;
+    background-color: #ffffff;
+  }
+
+  .song_title {
+    text-align: center;
+    font-size: 1.5em;
+    margin: 0 auto;
+  }
+
+  .artist_name {
+    text-align: center;
+    font-size: 1.5em;
+    margin: 0 auto;
+  }
+
+  .lyrics_column {
+      flex: 1;
+      width: 100%;
+      padding: 0.5em;
+      display: inline-block;
+      margin: 0 auto;
+  }
+
+  .lyrics_title {
       text-align: center;
-      font-size: 3em;
+      font-size: 1em;
+  }
+
+  .lyrics_container {
+      width: 100%;
+      height: 100%;
+      padding: 0.25em;
+  }
+
+  .verse_block {
+      padding-top: 0.5em;
+      padding-bottom: 0.5em;
+      width: 100%;
       margin: 0 auto;
-    }
-
-    .artist_name {
-      text-align: center;
-      font-size: 3em;
-      margin: 0 auto;
-    }
-
-    .lyrics_column {
-        flex: 1;
-        width: 30%;
-        padding: 0.5em;
-        display: inline-block;
-        margin: 0 auto;
-    }
-
-    .lyrics_title {
-        text-align: center;
-        font-size: 1.5em;
-    }
-
-    .lyrics_container {
-        width: 100%;
-        height: 100%;
-        padding: 0.5em;
-        display: flex;
-    }
-
-    .verse_block {
-        padding-top: 1em;
-        width: 100%;
-        margin: 0 auto;
-    }
+  }
 }
