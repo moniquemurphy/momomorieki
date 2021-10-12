@@ -5,4 +5,4 @@ Markdown==2.6.11
 Pillow==5.1.0
 psycopg2-binary==2.7.4
 pytz==2018.3
-sqlparse==0.4.1
+sqlparse==0.4.2
