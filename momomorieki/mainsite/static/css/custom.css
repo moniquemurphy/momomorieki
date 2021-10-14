@@ -1,15 +1,22 @@
 body {
     background-color: #ffd6e4;
+    font-family: 'Karla';
+    font-size: 1.2em;
 }
 
-.header-menu {
-  font-family: 'Clicker Script';
-  font-size: 4em;
-}
-
-.header-menu a {
+a {
+  color: #ff7099;
   text-decoration: none;
-  color: #000000;
+}
+
+a:visited {
+  color: #d41e52;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ffa8c5;
+  text-decoration: none;
 }
 
 .romaji {
@@ -77,21 +84,23 @@ body {
 
   .japanese_lyrics_column {
       min-width: 30%;
-      padding: 0.5em;
+      padding: 0.6em;
       display: inline-block;
       margin: 0 auto;
+      font-family: 'Noto Sans Japanese';
+      font-size: 1.1em;
   }
 
   .romaji_lyrics_column {
       min-width: 35%;
-      padding: 0.5em;
+      padding: 0.6em;
       display: inline-block;
       margin: 0 auto;
   }
 
   .english_lyrics_column {
       min-width: 30%;
-      padding: 0.5em;
+      padding: 0.6em;
       display: inline-block;
       margin: 0 auto;
   }

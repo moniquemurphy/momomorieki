@@ -36,7 +36,7 @@ SLUG_TO_SONG_TITLE = {
     'lose-your-mind-feat-yutaka-furukawa-from-doping-panda': 'LOSE YOUR MIND feat. Yutaka Furukawa from DOPING PANDA',
     'kimi-eforever-friend': 'Kimi e~forever friend',
     'better-days-feat-katou-miriya-and-tanaka-rouma': 'better days feat. Katou Miriya and Tanaka Rouma',
-    'koi-wa-rizumu-believe-my-way-': 'Koi wa RIZUMU -Believe My Way-',
+    'koi-wa-rizumu-believe-my-way': 'Koi wa RIZUMU -Believe My Way-',
     'i-believe-umi-no-soko-kara': 'I believe ~Umi no Soko kara~',
     'i-shiteru': 'i-shiteru',
     'kakusei-open-your-eyes': 'Kakusei ~open your eyes~',
@@ -78,5 +78,11 @@ SLUG_TO_SONG_TITLE = {
     'amai-wana-paint-it-black': 'Amai Wana ~Paint It Black~',
     'bc': 'B&C',
     'can-you-keep-a-secret': 'Can You Keep a Secret?',
-    'cant-wait-til-christmas': 'Can\'t Wait \'Til Christmas'
+    'cant-wait-til-christmas': 'Can\'t Wait \'Til Christmas',
+    'hymne-a-lamour-ai-no-ansemu': 'Hymne à l\'amour ~Ai no ANSEMU~',
+    'keep-tryin': 'Keep Tryin\'',
+    'kettobase': 'Kettobase!',
+    'movin-on-without-you': 'Movin\' On Without You',
+    'show-me-love-not-a-dream': 'Show Me Love (Not A Dream)',
+    'wait-see-risk': 'Wait & See ~Risk~'
 }
