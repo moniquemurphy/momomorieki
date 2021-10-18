@@ -15,7 +15,7 @@ import os
 SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = True
 
-ALLOWED_HOSTS = ['momomorieki.herokuapp.com']
+ALLOWED_HOSTS = ['momomorieki.herokuapp.com', 'momomori-eki.net']
 
 DATABASES = {
     'default': {
